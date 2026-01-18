@@ -72,23 +72,3 @@ async function fetchCarById(id) {
   }
 }
 
-// ==========================================
-// 2.4 - ZONE DE TEST (À supprimer plus tard)
-// ==========================================
-
-// Décommentez les lignes ci-dessous pour tester une fois que vous avez mis votre URL Render
-
-console.log("Démarrage du test de l'API...");
-
-fetchAllCars().then(cars => {
-  console.log("✅ Liste des voitures reçue :", cars);
-  
-  // Test de récupération d'une voiture spécifique (si la liste n'est pas vide)
-  if (cars.length > 0) {
-    // On prend l'ID de la première voiture pour tester
-    const firstCarId = cars[0].id || cars[0]._id; 
-    fetchCarById(firstCarId).then(car => {
-      console.log("✅ Détails de la première voiture :", car);
-    });
-  }
-});
